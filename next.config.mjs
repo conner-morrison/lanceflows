@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // The original was a fully static site — export to plain HTML/CSS/JS.
-  output: "export",
+  // Deployed on Vercel, which runs Next.js natively — no `output: "export"`
+  // needed. All pages are still prerendered (SSG). If you ever deploy to a
+  // non-Vercel static host (GitHub Pages, S3, nginx), re-add `output: "export"`.
   images: { unoptimized: true },
   trailingSlash: true,
   // Hide the Next.js dev-tools indicator ("N" badge at bottom-left).
