@@ -422,7 +422,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Aris Thorne",
       "role": "VP of Product",
-      "company": "Voyantis Spend",
+      "company": "Voyantis Corporate Travel",
       "text": "What I cared about most was no stale fares at checkout, and that's exactly what we got. Users describe a trip in plain language and the booking holds — we stopped fielding 'the price changed' support tickets almost overnight."
     },
     "beforeWorkflow": [
@@ -664,7 +664,7 @@ const CASE_DATA = [
     "id": "documenso-legal",
     "title": "Documenso Self-Hosted E-Signature with AI Field Detection",
     "liveUrl": "https://documenso.com",
-    "category": "Legal / Document Automation",
+    "category": "Real Estate / Document Automation",
     "serviceAreas": [
       "Product Engineering",
       "AI & Automation",
@@ -693,7 +693,7 @@ const CASE_DATA = [
       "Claude API",
       "Documenso TypeScript SDK"
     ],
-    "ourRole": "Legal-Tech Platform & Applied-AI Engineers",
+    "ourRole": "Document-Signing Platform & Applied-AI Engineers",
     "resultMetrics": [
       "Stood up compliant PAdES e-signing entirely inside the client's VPC — no SaaS holding disclosures.",
       "Replaced manual field placement with AI pre-fill from uploaded PDFs.",
