@@ -2,6 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import {
+  Code2,
+  Bot,
+  Cloud,
+  Network,
+  DraftingCompass,
+  Sprout,
+  HelpCircle,
+  AlertTriangle,
+  Flag,
+  Timer,
+  BrainCircuit,
+  TrendingUp,
+  Users,
+  Target,
+  UserPlus,
+  Wrench,
+  Handshake,
+  Check,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services — Lanceflows | Software Engineering & AI",
@@ -10,12 +30,12 @@ export const metadata: Metadata = {
 };
 
 const SERVICES = [
-  { ic: "💻", h: "Product Engineering", p: "Custom SaaS platforms, enterprise applications, portals, dashboards, and business systems." },
-  { ic: "🤖", h: "AI & Automation", p: "AI voice agents, RAG assistants, document intelligence, workflow agents, and computer vision." },
-  { ic: "☁️", h: "Cloud & DevOps", p: "Cloud architecture, CI/CD, monitoring, scalability, reliability, and cost-aware operations." },
-  { ic: "🔗", h: "Data & Integration", p: "API integrations, data extraction, web scraping, analytics pipelines, and CRM/ERP integration." },
-  { ic: "📐", h: "Architecture & Consulting", p: "Discovery, system design, risk analysis, roadmap planning, and engineering leadership." },
-  { ic: "🌱", h: "Maintenance & Growth", p: "Ongoing support, optimization, feature expansion, security improvements, and product evolution." },
+  { ic: <Code2 size={28} />, h: "Product Engineering", p: "Custom SaaS platforms, enterprise applications, portals, dashboards, and business systems." },
+  { ic: <Bot size={28} />, h: "AI & Automation", p: "AI voice agents, RAG assistants, document intelligence, workflow agents, and computer vision." },
+  { ic: <Cloud size={28} />, h: "Cloud & DevOps", p: "Cloud architecture, CI/CD, monitoring, scalability, reliability, and cost-aware operations." },
+  { ic: <Network size={28} />, h: "Data & Integration", p: "API integrations, data extraction, web scraping, analytics pipelines, and CRM/ERP integration." },
+  { ic: <DraftingCompass size={28} />, h: "Architecture & Consulting", p: "Discovery, system design, risk analysis, roadmap planning, and engineering leadership." },
+  { ic: <Sprout size={28} />, h: "Maintenance & Growth", p: "Ongoing support, optimization, feature expansion, security improvements, and product evolution." },
 ];
 
 const INDUSTRIES = [
@@ -48,12 +68,12 @@ const DIFFERENT = [
 ];
 
 const PAINS = [
-  { num: "?", h: "Unclear project direction", p: "We convert vague ideas into a structured blueprint, roadmap, milestones, and execution plan." },
-  { num: "!", h: "Poor technical decisions early on", p: "We identify architecture risks before they become expensive rebuilds." },
-  { num: "⚑", h: "Unreliable freelancers or scattered teams", p: "We provide a coordinated senior team with ownership, communication, and accountability." },
-  { num: "⏱", h: "Slow manual operations", p: "We automate repetitive workflows and connect tools, APIs, CRMs, databases, and internal systems." },
-  { num: "AI", h: "Difficulty adopting AI", p: "We design practical AI systems that fit real business workflows rather than experimental demos." },
-  { num: "↗", h: "Scaling and maintenance problems", p: "We build clean, maintainable systems designed for future features, traffic, and team growth." },
+  { num: <HelpCircle size={22} />, h: "Unclear project direction", p: "We convert vague ideas into a structured blueprint, roadmap, milestones, and execution plan." },
+  { num: <AlertTriangle size={22} />, h: "Poor technical decisions early on", p: "We identify architecture risks before they become expensive rebuilds." },
+  { num: <Flag size={22} />, h: "Unreliable freelancers or scattered teams", p: "We provide a coordinated senior team with ownership, communication, and accountability." },
+  { num: <Timer size={22} />, h: "Slow manual operations", p: "We automate repetitive workflows and connect tools, APIs, CRMs, databases, and internal systems." },
+  { num: <BrainCircuit size={22} />, h: "Difficulty adopting AI", p: "We design practical AI systems that fit real business workflows rather than experimental demos." },
+  { num: <TrendingUp size={22} />, h: "Scaling and maintenance problems", p: "We build clean, maintainable systems designed for future features, traffic, and team growth." },
 ];
 
 const RECEIVE = [
@@ -66,11 +86,11 @@ const RECEIVE = [
 ];
 
 const MODELS = [
-  { ic: "👥", h: "Dedicated team", p: "A dedicated development team for long-term product delivery." },
-  { ic: "🎯", h: "Fixed-scope project", p: "Fixed-scope delivery for clearly defined outcomes." },
-  { ic: "➕", h: "Staff augmentation", p: "Extra engineering capacity and specialist support for your team." },
-  { ic: "📐", h: "Technical consulting", p: "Architecture review and engineering leadership." },
-  { ic: "🛠️", h: "Ongoing support", p: "Maintenance, optimization, and continuous product support." },
+  { ic: <Users size={28} />, h: "Dedicated team", p: "A dedicated development team for long-term product delivery." },
+  { ic: <Target size={28} />, h: "Fixed-scope project", p: "Fixed-scope delivery for clearly defined outcomes." },
+  { ic: <UserPlus size={28} />, h: "Staff augmentation", p: "Extra engineering capacity and specialist support for your team." },
+  { ic: <DraftingCompass size={28} />, h: "Technical consulting", p: "Architecture review and engineering leadership." },
+  { ic: <Wrench size={28} />, h: "Ongoing support", p: "Maintenance, optimization, and continuous product support." },
 ];
 
 export default function ServicesPage() {
@@ -168,7 +188,7 @@ export default function ServicesPage() {
             <div className="diff-grid">
               {DIFFERENT.map((d) => (
                 <div className="diff" key={d.b}>
-                  <span className="check">✓</span>
+                  <span className="check"><Check size={18} strokeWidth={3} /></span>
                   <div>
                     <b>{d.b}</b>
                     <span>{d.s}</span>
@@ -210,7 +230,7 @@ export default function ServicesPage() {
             <div className="diff-grid">
               {RECEIVE.map((d) => (
                 <div className="diff" key={d.b}>
-                  <span className="check">✓</span>
+                  <span className="check"><Check size={18} strokeWidth={3} /></span>
                   <div>
                     <b>{d.b}</b>
                     <span>{d.s}</span>
@@ -237,7 +257,7 @@ export default function ServicesPage() {
                 </div>
               ))}
               <div className="service-card">
-                <div className="ic">🤝</div>
+                <div className="ic"><Handshake size={28} /></div>
                 <h3>Not sure yet?</h3>
                 <p>
                   Tell us your goal and we&apos;ll recommend the right model.{" "}

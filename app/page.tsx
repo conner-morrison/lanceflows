@@ -4,14 +4,26 @@ import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
 import ContactForm from "@/components/ContactForm";
 import GearsIcon from "@/components/GearsIcon";
+import {
+  Target,
+  Workflow,
+  Rocket,
+  Handshake,
+  Wrench,
+  Users,
+  Leaf,
+  Mail,
+  MapPin,
+  Clock,
+} from "lucide-react";
 
 const WHY_CLIENTS: { icon: React.ReactNode; h: string; p: string }[] = [
-  { icon: "🤝", h: "Reliability", p: "Commitments are tracked through clear milestones and deliverables." },
-  { icon: "🛠️", h: "Professional execution", p: "Senior engineers manage architecture, implementation, testing, and deployment with care." },
+  { icon: <Handshake size={22} />, h: "Reliability", p: "Commitments are tracked through clear milestones and deliverables." },
+  { icon: <Wrench size={22} />, h: "Professional execution", p: "Senior engineers manage architecture, implementation, testing, and deployment with care." },
   { icon: <GearsIcon />, h: "Controlled process", p: "Track progress, monitor every decision, and refine requirements anytime — clearly and effortlessly, through our seamless system." },
-  { icon: "🎯", h: "Predictable results", p: "Clients know what is being built, why it matters, and when it is expected." },
-  { icon: "👥", h: "Disciplined workforce", p: "The team operates with ownership, responsiveness, and technical accountability." },
-  { icon: "🧘", h: "Zero chaos", p: "A calm, organized delivery experience from discovery to launch." },
+  { icon: <Target size={22} />, h: "Predictable results", p: "Clients know what is being built, why it matters, and when it is expected." },
+  { icon: <Users size={22} />, h: "Disciplined workforce", p: "The team operates with ownership, responsiveness, and technical accountability." },
+  { icon: <Leaf size={22} />, h: "Zero chaos", p: "A calm, organized delivery experience from discovery to launch." },
 ];
 
 export default function Home() {
@@ -64,7 +76,7 @@ export default function Home() {
             </div>
             <div className="feature-grid">
               <div className="card">
-                <div className="ic">🎯</div>
+                <div className="ic"><Target size={26} /></div>
                 <h3>Right-fit expertise</h3>
                 <p>
                   We put senior specialists on your project whose strengths fit the work —
@@ -72,7 +84,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="card">
-                <div className="ic">🤝</div>
+                <div className="ic"><Workflow size={26} /></div>
                 <h3>Seamless collaboration</h3>
                 <p>
                   Clear scopes, transparent communication, and a workflow that keeps everyone
@@ -80,7 +92,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="card">
-                <div className="ic">🚀</div>
+                <div className="ic"><Rocket size={26} /></div>
                 <h3>Built to grow</h3>
                 <p>
                   From a single feature to a full platform, we scale with your ambitions and your
@@ -183,21 +195,21 @@ export default function Home() {
               <div className="contact-side">
                 <ul className="contact-info">
                   <li>
-                    <span className="ic">✉️</span>
+                    <span className="ic"><Mail size={22} /></span>
                     <div>
                       <strong>Email</strong>
                       <small>admin@lanceflows.com</small>
                     </div>
                   </li>
                   <li>
-                    <span className="ic">📍</span>
+                    <span className="ic"><MapPin size={22} /></span>
                     <div>
                       <strong>Office</strong>
                       <small>Austin, Texas</small>
                     </div>
                   </li>
                   <li>
-                    <span className="ic">⏰</span>
+                    <span className="ic"><Clock size={22} /></span>
                     <div>
                       <strong>Hours</strong>
                       <small>Mon–Fri, 9:00–18:00</small>

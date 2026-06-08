@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ArchDiagram from "@/components/ArchDiagram";
 import CaseAvatar from "@/components/CaseAvatar";
+import { Wrench, ArrowUpRight, AlertTriangle, Check } from "lucide-react";
 import { CASE_DATA, type CaseStudy } from "@/lib/cases-data";
 
 // Locally-stored client portraits keyed by case id (ported from case-detail.html).
@@ -109,9 +110,9 @@ export default async function CaseDetailPage({
             <h1 id="d-title">{c.title}</h1>
             <p id="d-summary"></p>
             <div className="d-meta" id="d-meta">
-              <span className="d-chip">🛠 {c.ourRole}</span>
+              <span className="d-chip"><Wrench size={14} />{c.ourRole}</span>
               <a className="d-chip" href={c.liveUrl} target="_blank" rel="noopener">
-                ↗ {domain(c.liveUrl)}
+                <ArrowUpRight size={14} />{domain(c.liveUrl)}
               </a>
               {(c.serviceAreas || []).map((a) => (
                 <span className="d-chip soft" key={a}>
@@ -190,13 +191,13 @@ export default async function CaseDetailPage({
                 <div className="section-label">Workflow impact mapping</div>
                 <div className="flow-wrap">
                   <div className="flow before">
-                    <h2>⚠ Before — manual bottleneck flow</h2>
+                    <h2><AlertTriangle size={16} />Before — manual bottleneck flow</h2>
                     {(c.beforeWorkflow as WorkflowStep[]).map((s, k) => (
                       <Step s={s} i={k} key={k} />
                     ))}
                   </div>
                   <div className="flow after">
-                    <h2>✓ After — automated optimized flow</h2>
+                    <h2><Check size={16} strokeWidth={3} />After — automated optimized flow</h2>
                     {(c.afterWorkflow as WorkflowStep[]).map((s, k) => (
                       <Step s={s} i={k} key={k} />
                     ))}

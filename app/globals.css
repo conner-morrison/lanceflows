@@ -445,7 +445,7 @@ a.d-chip:hover{background:rgba(255,255,255,.26)}
 /* workflow impact mapping */
 .flow-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .flow{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--panel);box-shadow:var(--elev)}
-.flow h2{font-size:.95rem;margin-bottom:18px}
+.flow h2{font-size:.95rem;margin-bottom:18px;display:flex;align-items:center;gap:7px}
 .flow.before h2{color:#c0455f}
 .flow.after h2{color:var(--brand)}
 .flow-step{position:relative;padding:0 0 18px 40px}
@@ -1079,6 +1079,13 @@ footer{background:#0b1530;color:#c8cfe8;padding:50px 0 26px}
 .rep-item .rep-meta{font-size:.8rem;color:var(--ink-soft);font-weight:600;margin-bottom:6px}
 .rep-item p{font-size:.93rem;color:var(--ink);white-space:pre-wrap}
 .rep-item .file-list{margin-top:8px}
+
+/* ===================== Icons (Lucide SVG) ===================== */
+/* Light icon badges have no set text color — give their SVG icons the brand color.
+   Dark badges (.why-card .num, .diff .check) already set color:#fff, so their
+   icons stay white. */
+.card .ic,.service-card .ic,.contact-info .ic{color:var(--brand)}
+.ic svg,.num svg,.check svg{display:block}
 
 /* ===================== Human-verification overlay (Cloudflare Turnstile gate) ===================== */
 .vh-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;background:linear-gradient(125deg,#0a1736,#123178 46%,#0e5f93 72%,#0b8f87);font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;opacity:1;transition:opacity .45s ease}
