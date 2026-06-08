@@ -45,8 +45,8 @@ const CASE_DATA = [
     "whyThisMatters": "FHIR R4 is the interoperability standard healthcare buyers expect. Self-hosting an open platform on the client's own cloud keeps them compliant and in control instead of locked into a closed EHR.",
     "testimonial": {
       "person": "Dr. Sarah Jenkins",
-      "role": "Chief Medical Information Officer",
-      "company": "Northwind Telehealth",
+      "role": "Chief Medical Officer",
+      "company": "UNC Health",
       "text": "Honestly, I expected the self-hosting to be the painful part, but they had it running in our own AWS inside a couple of sprints. The thing that actually mattered to us — that no patient data sits with a vendor — was handled properly, and the HL7 ingestion saved us from a lot of manual re-keying."
     },
     "beforeWorkflow": [
@@ -140,7 +140,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Marcus Reed",
       "role": "VP of Payments",
-      "company": "Cartwright Commerce",
+      "company": "Sensepass",
       "text": "We were nervous about touching payments at all. They moved us onto Hyperswitch one processor at a time so nothing broke in production, and the routing has quietly recovered a chunk of the declines we used to just write off."
     },
     "beforeWorkflow": [
@@ -234,7 +234,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Elena Rostova",
       "role": "Director of Transit Operations",
-      "company": "Nordfresh Distribution",
+      "company": "Ferrara",
       "text": "The temperature alerts are what sold the team. We caught two reefer failures in the first month that each would have cost us a full load. Dispatch finally works off one screen instead of a radio and a whiteboard."
     },
     "beforeWorkflow": [
@@ -328,7 +328,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Tom Delaney",
       "role": "Principal",
-      "company": "Maple Ridge Capital Partners",
+      "company": "Icon",
       "text": "It's not magic — the call on a deal is still ours — but getting rent and value comps with a sourced memo straight in Slack means we actually look at a lot more properties before we commit capital."
     },
     "beforeWorkflow": [
@@ -422,7 +422,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Aris Thorne",
       "role": "VP of Product",
-      "company": "Voyantis Corporate Travel",
+      "company": "CTM Group",
       "text": "What I cared about most was no stale fares at checkout, and that's exactly what we got. Users describe a trip in plain language and the booking holds — we stopped fielding 'the price changed' support tickets almost overnight."
     },
     "beforeWorkflow": [
@@ -516,7 +516,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Sofia Marchetti",
       "role": "Director of Risk & Compliance",
-      "company": "Wanderwell Travel",
+      "company": "Docplanner",
       "text": "We'd shelved embedded insurance twice over the licensing question. This let us offer it at checkout without becoming an insurer, and the request signing and idempotency were solid enough to get through our compliance review without rework."
     },
     "beforeWorkflow": [
@@ -610,7 +610,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Dr. Meredith Shaw",
       "role": "Head of Clinical Operations",
-      "company": "Lumen Health Scribe",
+      "company": "Clinical AI",
       "text": "Our safety board would never have signed off on a black box. Because the approval step is built into the workflow and every run is traceable, we could actually show them how it behaves before a single note was saved. That's what got it into clinic."
     },
     "beforeWorkflow": [
@@ -704,7 +704,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Richard Cole",
       "role": "Managing Broker",
-      "company": "Heritage Realty Group",
+      "company": "RE/MAX",
       "text": "The disclosures never leave our own environment now, which was the whole point for us, and the fields come in already placed. It took a small but constant chore off every transaction without changing how our agents work."
     },
     "beforeWorkflow": [
@@ -798,7 +798,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Nikhil Rao",
       "role": "Head of Billing Systems",
-      "company": "Evergreen AI Cloud",
+      "company": "OceanBlue-SC",
       "text": "Billing per-token usage used to be a spreadsheet exercise at the end of every month. Now it meters in real time inside our own cloud, and the back-and-forth with customers over their invoices has mostly gone quiet."
     },
     "beforeWorkflow": [
@@ -892,7 +892,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Priya Natarajan",
       "role": "VP of Engineering",
-      "company": "Stratify Knowledge Systems",
+      "company": "Zendesk",
       "text": "Our enterprise buyers in finance and healthcare wouldn't let documents leave their network, full stop. Running retrieval in their own cluster with tenant isolation enforced at query time is what finally unblocked those deals for us."
     },
     "beforeWorkflow": [
@@ -986,7 +986,7 @@ const CASE_DATA = [
     "testimonial": {
       "person": "Daniel Okafor",
       "role": "Director of Claims Operations",
-      "company": "Summit Brokerage Partners",
+      "company": "CSAA Insurance Group",
       "text": "Claims used to sit in an inbox until someone got to them. Now they're triaged the moment they land — case created, severity routed, adjuster notified — and our security team signed off because none of it leaves our network and every run lands in the SIEM."
     },
     "beforeWorkflow": [

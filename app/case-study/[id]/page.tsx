@@ -94,8 +94,8 @@ export default async function CaseDetailPage({
 
   const num = String(idx + 1).padStart(2, "0");
   const t = c.testimonial;
-  const author =
-    t.person + (t.role ? ", " + t.role : "") + (t.company ? " at " + t.company : "");
+  // Show only name + company (role intentionally omitted from display).
+  const author = t.person + (t.company ? " at " + t.company : "");
   const initials = initialsOf(t.person);
 
   return (
