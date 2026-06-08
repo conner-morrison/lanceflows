@@ -45,6 +45,8 @@ export default function HumanVerify() {
   const [error, setError] = useState(false);
   const hostRef = useRef<HTMLDivElement>(null);
   const renderedRef = useRef(false);
+  const widgetIdRef = useRef<string | null>(null);
+  const errorsRef = useRef(0);
 
   // Decide whether to show the gate (only when not already verified this session).
   useEffect(() => {
@@ -77,15 +79,38 @@ export default function HumanVerify() {
       if (renderedRef.current || !window.turnstile || !hostRef.current) return;
       renderedRef.current = true;
       try {
-        window.turnstile.render(hostRef.current, {
+        widgetIdRef.current = window.turnstile.render(hostRef.current, {
           sitekey: SITE_KEY,
           theme: "auto",
           callback: () => pass(),
-          "error-callback": () => setError(true),
-          "expired-callback": () => window.turnstile?.reset(),
+          // Generic execution errors (e.g. 400020) are usually transient — reset
+          // and retry a couple of times. If they persist, fail OPEN: a client-side
+          // gate must never lock real visitors out of the whole site.
+          "error-callback": () => {
+            errorsRef.current += 1;
+            if (errorsRef.current <= 2) {
+              try {
+                window.turnstile?.reset(widgetIdRef.current ?? undefined);
+              } catch {
+                /* ignore */
+              }
+              return;
+            }
+            setError(true);
+            window.setTimeout(pass, 1500);
+          },
+          "expired-callback": () => {
+            try {
+              window.turnstile?.reset(widgetIdRef.current ?? undefined);
+            } catch {
+              /* ignore */
+            }
+          },
         });
       } catch {
+        // Render itself threw — let people through rather than block the site.
         setError(true);
+        window.setTimeout(pass, 1500);
       }
     };
 
