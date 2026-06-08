@@ -377,8 +377,10 @@ section{scroll-margin-top:90px}
 .case-card .case-num{width:46px;height:46px;border-radius:12px;font-size:1.05rem}
 .case-card h2{font-size:1.18rem;margin-bottom:10px}
 .case-card .summary{color:var(--ink-soft);font-size:.95rem;margin-bottom:16px}
-.case-card .pill-wrap{margin-bottom:20px}
-.case-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--brand);font-size:.95rem;margin-top:auto}
+/* Pin the domain pill (and the link below it) to the card bottom so the pills
+   line up across every card regardless of title/summary length. */
+.case-card .pill-wrap{margin-top:auto;margin-bottom:16px}
+.case-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--brand);font-size:.95rem}
 .case-card:hover .case-link{gap:10px}
 @media(max-width:900px){.case-card-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.case-card-grid{grid-template-columns:1fr}}
